@@ -54,7 +54,27 @@
         </div>
       </div>
     </div>
-   
+   <button id="sum" >Окно в полный   экран</button>
+<button id="sub" >Стандартный экран</button>
+<script>
+	document.querySelector('#sum').addEventListener('click', function(){
+        if(document.documentElement.webkitRequestFullscreen) {
+                document.documentElement.webkitRequestFullscreen();
+        }
+        else{
+            document.documentElement.mozRequestFullScreen();
+        }
+});
+document.querySelector('#sub').addEventListener('click', function(){
+    if(document.documentElement.webkitRequestFullscreen) {
+        document.webkitCancelFullScreen()
+   }
+    else{
+        document.mozCancelFullScreen();
+    }
+});
+    </script>
+<!-- https://webfanat.com/article_id/?id=77 -->
   
 
  <script src="script.js"></script>
